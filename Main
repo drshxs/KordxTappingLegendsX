@@ -1,22 +1,13 @@
-local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function sieaSMcFNVGHiqxOuboDy(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
-
-data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
-
-
- 
-
-
 if game.PlaceId  == 8750997647 then
-local OrionLib = loadstring(game:HttpGet((sieaSMcFNVGHiqxOuboDy('zAdNQQGPWPQyUWSpgPOBnIrLOrFUVXtGSlOuYZiwrBLGoWczRiFPKjSaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NobGV4d2FyZS9Pcmlvbi9tYWluL3NvdXJjZQ=='))))()
-local Window = OrionLib:MakeWindow({Name = sieaSMcFNVGHiqxOuboDy('OILgtJNvVBKxVLYDXtJNJvGjWCjWWcZZLtWDYhdNDSsSvEtwoDqDYzDS29yZHggfCBUYXBwaW5nIExlZ2VuZHMgWCBIdWI='), HidePremium = false, IntroText = sieaSMcFNVGHiqxOuboDy('YEzMyJhfpnlkAXgLTkgqqdCTDpKxmuqCvnCBgftIPggVFQglqgANHFbVGFwcGluZyBMZWdlbmRzIFggfCBLb3JkeA=='), SaveConfig = true, ConfigFolder = sieaSMcFNVGHiqxOuboDy('AyypUxYIvZnxQOfFzyGqMBiMWOhmvbjVfjuzyTJueTjkDemoJhDRpSQVGFwcGluZyBMZWdlbmRzIFggQ29uZmln')})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Kordx | Tapping Legends X Hub", HidePremium = false, IntroText = "Tapping Legends X | Kordx", SaveConfig = true, ConfigFolder = "Tapping Legends X Config"})
 
 -- Values
 
 _G.autoTap = true
 _G.autoRebirth = true 
 _G.autoHatch = true
-_G.selectEgg = sieaSMcFNVGHiqxOuboDy('HsDbVRmtersvShTksHTBNrxyDqxSxMwRFujnLJXBCxrCCfyeznalRqTQmFzaWMgRWdn')
+_G.selectEgg = "Basic Egg"
 _G.equipBest = true
 _G.autoHatch3 = true
 
@@ -24,82 +15,82 @@ _G.autoHatch3 = true
 
 function autoTap()
     while _G.autoTap == true do
-        game:GetService(sieaSMcFNVGHiqxOuboDy('cZkPDAwWcxhQnvxvUbKhpqJTopRYLXWuNAiVIBTzkCuizOvDtgOlqZMUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.Tap:FireServer()
+        game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
         wait(0.000000000001)
      end
     end
 
 function autoRebirth()
     while _G.autoRebirth == true do
-        game:GetService(sieaSMcFNVGHiqxOuboDy('kfSSlFHFZNZxhapLSVOBrFuQQOVCrAxjKMvLjpfbrgGOmTYHWJIEKOXUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.Rebirth:FireServer(1) 
+        game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(1) 
         wait(0.5)
      end
     end
 
 function autoHatch()
     while _G.autoHatch == true do
-        game:GetService(sieaSMcFNVGHiqxOuboDy('wrqCfJsZXybjtwUixQkOuDRqTqcATCAWRuwUFshJdBFrDXeJXKREusZUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.BuyEgg:InvokeServer(_G.selectEgg,1)
+        game:GetService("ReplicatedStorage").Remotes.BuyEgg:InvokeServer(_G.selectEgg,1)
         wait(0.0001)
     end
 end
 
 function equipBest()
     while _G.equipBest == true do
-        game:GetService(sieaSMcFNVGHiqxOuboDy('ZPOqrJWimaVSLQUOrvnWJsAcDaKBOuYwjWamZYvTZPCtudIsKlCJEZkUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.UnequipAll:InvokeServer()
-        game:GetService(sieaSMcFNVGHiqxOuboDy('rmdTmmzSzAcgPVTgcgZAGvqoXxoLfZjXcYQPKpodXKrnXhnbgJIWhkgUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.EquipBest:InvokeServer()
+        game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+        game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
         wait(30)
     end
 end
 
 function autoHatch3()
     while _G.autoHatch3 == true do
-        game:GetService(sieaSMcFNVGHiqxOuboDy('pFUrgGMEVLHlSyFasFjzTfTDyGoYQYfQFOHMyfyFaoCbrYibRuyJbCsUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.BuyEgg:InvokeServer(_G.selectEgg,3)
+        game:GetService("ReplicatedStorage").Remotes.BuyEgg:InvokeServer(_G.selectEgg,3)
         wait(0.0001)
     end
 end
 -- Tabs
 local MainTab = Window:MakeTab({
-    Name = sieaSMcFNVGHiqxOuboDy('ijAHKQiUlqakxKlNAGcMzLVWhQrVLMOYjJKTbWjRAZhDSFKqosItqPbTWFpbg=='),
-    Icon = sieaSMcFNVGHiqxOuboDy('nqnLXqzWTUhRyUZDiybXwKSfMOazEaUzUfHNpuaxXNZNEiFvwWtRMghcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local AutoClickTab = Window:MakeTab({
-    Name = sieaSMcFNVGHiqxOuboDy('pKujtJULQkWAeUaKpRYiXxUqyEOQAcOuJqwxdQDOMyEaEtsYovHPTYEQXV0b0Zhcm1z'),
-    Icon = sieaSMcFNVGHiqxOuboDy('JCjKZhQhzJHhSHhYcAgvZidoaYpTrwZAgwPWYKgTNbzBeRxsIdsPTxxcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+    Name = "AutoFarms",
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local UpgradesTab = Window:MakeTab({
-    Name = sieaSMcFNVGHiqxOuboDy('HpaFIxusHkoxOQshRrprLHasLYtlcZSZkgYiGeEWNVmdBbgyhTaUenJVXBncmFkZXM='),
-    Icon = sieaSMcFNVGHiqxOuboDy('iYktDLrXQupHJJrzYkumDlHYqrAVkHOTHZcTjVCugkmEJipGqBkrKZqcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+    Name = "Upgrades",
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local EggsTab = Window:MakeTab({
-    Name = sieaSMcFNVGHiqxOuboDy('zHCJEBXfQmSoSYyOrEdBOKKhEdVymzUqgWQovbRxmccfbMkldtZBeSKRWdncw=='),
-    Icon = sieaSMcFNVGHiqxOuboDy('TZDrDNnbdfWmBpvGCJgyGAhYhpXmIQFcMlWMFOMqmeHvrjZnfjiJKVYcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+    Name = "Eggs",
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local TeleportTab = Window:MakeTab({
-    Name = sieaSMcFNVGHiqxOuboDy('kypUmDSacULkCphWKRcCMaOomUnpsGVvNdiAeqMjCvyZkYlvBgsxTDTVGVsZXBvcnQ='),
-    Icon = sieaSMcFNVGHiqxOuboDy('tLwlcdFhlmvRysBfbbKFRKiREFpfSEoIalglEViTncZPcBKereAYIqOcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+    Name = "Teleport",
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 local MiscTab = Window:MakeTab({
-    Name = sieaSMcFNVGHiqxOuboDy('sCYxGgWrYCDlLXBLypsEXBfiLooMpsMULTzZqEXxfWTiQzPAgPgxelUTWlzYw=='),
-    Icon = sieaSMcFNVGHiqxOuboDy('wHAQVRfOtSVzzLkQzXBdyytdCZwklTjcKRvXWOIbcAIkcBczdegodTCcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+    Name = "Misc",
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 -- Toggles
 
-AutoClickTab:AddLabel(sieaSMcFNVGHiqxOuboDy('FfhNgvsulBCfqPRCamEQGKzEXyTDTpNiVagGqltIAFioWamKmFvGLcPTk9URTogTWF4IC8gQXV0byBSZWJpcnRoIGlzIHN0aWxsIHVuZGVyIG1haW50ZW5hbmNlLi4u'))
+AutoClickTab:AddLabel("NOTE: Max / Auto Rebirth is still under maintenance...")
 
 AutoClickTab:AddToggle({
-	Name = sieaSMcFNVGHiqxOuboDy('qaOKetfETYCpPJBzNDViSfPpMAqZMqTKRyHTRAKHtjyHDBsBjtYthEGQXV0byBUYXA='),
+	Name = "Auto Tap",
 	Default = false,
 	Callback = function(Value)
 		_G.autoTap = Value
@@ -108,7 +99,7 @@ AutoClickTab:AddToggle({
 })
 
 AutoClickTab:AddToggle({
-	Name = sieaSMcFNVGHiqxOuboDy('jknuSIWGBYfgLKAuJYAvEKcuiPSaPOqQLhybVvwblZbzfGmKBEKNmHtQXV0byBSZWJpcnRo'),
+	Name = "Auto Rebirth",
 	Default = false,
 	Callback = function(Value)
 		_G.autoRebirth = Value
@@ -117,7 +108,7 @@ AutoClickTab:AddToggle({
 })
 
 EggsTab:AddToggle({
-	Name = sieaSMcFNVGHiqxOuboDy('fmBOEbMNueryBPuHRLCNCctiWVJduEwNIFAebxaeSsnuBoHtqGTdbpdQXV0byBIYXRjaA=='),
+	Name = "Auto Hatch",
 	Default = false,
 	Callback = function(Value)
         _G.autoHatch = Value
@@ -126,7 +117,7 @@ EggsTab:AddToggle({
 })
 
 EggsTab:AddToggle({
-	Name = sieaSMcFNVGHiqxOuboDy('MVYSauqTNkYvOsBmJUeYhkNnOSMLjCuoYwbvaVZpTyEyUpPObhdvpMZMyBBdXRvIEhhdGNo'),
+	Name = "3 Auto Hatch",
 	Default = false,
 	Callback = function(Value)
         _G.autoHatch3 = Value
@@ -134,7 +125,320 @@ EggsTab:AddToggle({
 	end    
 })
 
-MainTab:AddLabel(sieaSMcFNVGHiqxOuboDy('SumOetlTXYBruRkqBnbSAyaKVSJeWTggEwFUfQIZPsAVPuohSdDOKalV2VsY29tZSB0byBLb3JkeA==')s Tapping Legends X Hub!sieaSMcFNVGHiqxOuboDy('KLiRuZWtPCiaEmXbllQIyyuoJmgHKROVwOWVRaQYsWtOzXEOLXsjuHFKQ0KTWFpblRhYjpBZGRMYWJlbCg=')Check out the tab Misc for our discord server.sieaSMcFNVGHiqxOuboDy('LeGRIzCfsRuLMEtUAvwBQAaoKjKzOarNtSVuefEYmGZQYdSlqKofhkHKQ0KTWFpblRhYjpBZGRMYWJlbCg=')Script Made by hecate$#6910 / KordxsieaSMcFNVGHiqxOuboDy('UJpBlehFGhvhcjYOzmnoXctqoyeyRmqCawxsTNRppcoBNiJVrgAajqwKQ0KDQpNaXNjVGFiOkFkZExhYmVsKA==')Join the Discord! https://discord.gg/6Bg4aw4cH8sieaSMcFNVGHiqxOuboDy('ngPgCaEjiAwyUvgFDRQKNQiLeWYjFyGyPeAYSGiGAngORlAnZIHcYHnKQ0KDQpNaXNjVGFiOkFkZFRvZ2dsZSh7DQoJTmFtZSA9IA==')Auto Equip BestsieaSMcFNVGHiqxOuboDy('BOJqSncSVIkhaHioOaCHoGUhXXdxfUxitPakzfrsYuVpELUVMjAykftLA0KCURlZmF1bHQgPSBmYWxzZSwNCglDYWxsYmFjayA9IGZ1bmN0aW9uKFZhbHVlKQ0KICAgICAgICBfRy5lcXVpcEJlc3QgPSBWYWx1ZQ0KICAgICAgICBlcXVpcEJlc3QoKQ0KCWVuZCAgICANCn0pDQoNCi0tIEJ1dHRvbnMNCg0KVXBncmFkZXNUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')Rebirth Upgrade (58 Max)sieaSMcFNVGHiqxOuboDy('HrDFSIuSzsvJLANjzauOuSCueUUIwBwuPblgbpoXlcQalMnCIIteYelLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('eezoaTqkAqUmRJNUkYbYcFsatRjhqtzsqoEeuqVrXVcotkFaJKrACiEKS5SZW1vdGVzLlVwZ3JhZGU6SW52b2tlU2VydmVyKA==')RubysieaSMcFNVGHiqxOuboDy('NIchAPuoSLQaDoLNgyrrYcJdTZPoZJbtTdfylgQoKBzKFNjJGIaKkCLLA==')RebirthsUpgradesieaSMcFNVGHiqxOuboDy('YduplAfwxCfUWIvCZOucgnWeSjwLdiqfPPzqyxmwlsAYkgrFrGPdeQiKQ0KICAJZW5kICAgIA0KfSkNCg0KVXBncmFkZXNUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')Tap Multiplier Upgrade  (250 Max)sieaSMcFNVGHiqxOuboDy('qKvZpfHxldUHaSzNfvwzbzbdSHSPnkODsGUfMGdKtIvYYBYvMieSluvLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('aJysqxAXLOokGbUdSFAzKcnZQaYopXlNrxcIqpLKWwClRJEeFsmColwKS5SZW1vdGVzLlVwZ3JhZGU6SW52b2tlU2VydmVyKA==')RubysieaSMcFNVGHiqxOuboDy('bEhOZfNOrfSBWqqLodfgYgBoCqdgeWMlFCyZQcAzqqHDyKhdWgchzHZLA==')TapMultipliersieaSMcFNVGHiqxOuboDy('DXYuJnPilUkOVPViMkDVJvTtIkYTbSFQKHBeKgAlyhxwDqyPSUMYDalKQ0KICAJZW5kICAgIA0KfSkNCg0KVXBncmFkZXNUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')+1 Pet Storage (200 Max)sieaSMcFNVGHiqxOuboDy('dqkSYQnhbojooAHThFOCtgdjloUpGiwiGdHfKWUcmkhlOIeDeDCSwEELA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('ooypQxUytrpjzlFpoQJziFNeAiqXoZeGUFioAkVbMuTyFYOPrgHvgtTKS5SZW1vdGVzLlVwZ3JhZGU6SW52b2tlU2VydmVyKA==')RubysieaSMcFNVGHiqxOuboDy('FlZdFVXwzfXpvsrPfjdPPPiiuDawJkqRkElmSkYqRqKEzExAOfgVeDiLA==')PetStoragesieaSMcFNVGHiqxOuboDy('TefzoSrkvAsipklHKmnqamhxPNwWpkCgFuConuaJlezgJbEyuMwAgyaKQ0KICAJZW5kICAgIA0KfSkNCg0KVXBncmFkZXNUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')Faster WalkSpeed (32 Max)sieaSMcFNVGHiqxOuboDy('tpQqOAKdtjJsbrORLmePYxUnhUUoJCnUMAlxheYnOoPRvJGDLtzdOqxLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('NitrzvayOQNUuiGAaCJpqkcLLUewIFaVHjErXwVOFULWrFmqthjKiMzKS5SZW1vdGVzLlVwZ3JhZGU6SW52b2tlU2VydmVyKA==')RubysieaSMcFNVGHiqxOuboDy('ARepYjomBxPjDDLoqjcUbAkByIORHtkxNJXhFAXvHzmDcfdWRUwwbIeLA==')WalkSpeedsieaSMcFNVGHiqxOuboDy('nLoCcDfDZXAtdNOJvfedZTxHychgacFkbEmfWqvAdVVdupPhBLuNKbCKQ0KICAJZW5kICAgIA0KfSkNCg0KVXBncmFkZXNUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')Critical Chances (200 Max)sieaSMcFNVGHiqxOuboDy('nwPKgEWRqaIHTKKSXEMmfxUBTXvXXpBNBQWXTRLJEPQVTPLLrNlzEtaLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('truFalHWBgaAJzncUESoPqcnYWqvrAvYQhzBApJbkawjNFTFocEIbBZKS5SZW1vdGVzLlVwZ3JhZGU6SW52b2tlU2VydmVyKA==')RubysieaSMcFNVGHiqxOuboDy('ZOSRbZxgWinTOyVJTdNGXqHDKRdzqJuqISbUncngZqpkEBLRAJgSscLLA==')CriticalChancessieaSMcFNVGHiqxOuboDy('IJUCkiktmEIVPxlKmmahtmxzScMUYiseGemukOENkmkciDuhdCBosEcKQ0KICAJZW5kICAgIA0KfSkNCg0KTWlzY1RhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Claim PlayTime AchievementssieaSMcFNVGHiqxOuboDy('bhYqZRomPiYewlQwXQKegutgiYgPiUxzfmMBrhxhkXufdAyKrKPnrQfLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('BSXLZPMnytdhlvEUlgWFErsOUNsvourTkqoRgnIpGkWJCGeDoOOwMWVKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoMSkNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('zPEQuBXsEopUpdGbMhraYaWDMwfffNPbPEwWObcsDFIysHzbgqoObZzKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoMikNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('qGvhdFSthUNOnROefgcUIKxLOtzLrTGctqyZZacupvruawkyalZrKeLKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoMykNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('VtlQOoXqCMXcMWzgfZumsJDEIVcEpGLyBldrhJFeUauhTmpKpBlxlOPKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoNCkNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('xEopoYPgQFgAnAkVehKEEPtInEDUzbMGaWNdZnptrTwQNzaCYCvCDPeKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoNSkNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('GdqOQsPZMIctBTUveUwGBdFhPTlxKhxLapFtEfuYbwIGUqgdmDjAMxDKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoNikNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('MeWshowWLuNQFMuDzLdNUuvOsmlBknfEtlptidFuSZoUVBbDVjjafpQKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoNykNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('GOaADOmmUQRTdemYjJwdgRARSfSKeZBHmItCFENFenwrtDKsizBiuCKKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoOCkNCgkJd2FpdCgwLjAxKQ0KCQlnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('HQyKyJmyLgNnUhPHkEZQZZKdGvQFbUJAaZhMFxEBAmHsWqHipqeBfPfKS5SZW1vdGVzLlBsYXl0aW1lUmV3YXJkOkZpcmVTZXJ2ZXIoOSkNCiAgCWVuZCAgICANCn0pDQoNCk1pc2NUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')FreeAutoClickersieaSMcFNVGHiqxOuboDy('ZUqxVpNpxabsVAiITdUPDXjuMRzjrHDlczMscDJIjdkLLYSoHntKzRmLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('aJhdsAcQYVEVziNAJyWUkxDrsvpjLRfYSRLEjdmzPgVIrWrRSvPTuJnKS5SZW1vdGVzLlNldHRpbmdzOkZpcmVTZXJ2ZXIo')FreeAutoEnabledsieaSMcFNVGHiqxOuboDy('TNRNTaqvVWqVUqeQBNdLtCDMKKgDJrCnlCPFGeFvPdezsDiJLpkgCMtKQ0KICAJZW5kICAgIA0KfSkNCg0KTWlzY1RhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Show / Hide AllsieaSMcFNVGHiqxOuboDy('ETcAjrHSnmsfPuvPnmVSJzCfDSlmxQGGxJawPggcmxJDHgiVkZqhsFcLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('qnnVqZTXRLIQkXnemwxPBcONNSuepwDDwMXRdtniixQsxjoryrGlHONKS5SZW1vdGVzLlNldHRpbmdzOkZpcmVTZXJ2ZXIo')Settings_HideAllPetssieaSMcFNVGHiqxOuboDy('jyMQCngryOaQSsytZwRgAXtbMaHhGJmeeUvhRXOFULPyXvfZGUjbNRNKQ0KICAJZW5kICAgIA0KfSkNCg0KVXBncmFkZXNUYWI6QWRkTGFiZWwo')Other UpgradessieaSMcFNVGHiqxOuboDy('USBKWWuZBennHeIsrPvaPZbEpNJvVynVpbavqPKETXrHBZsmjqHzEyQKQ0KDQpVcGdyYWRlc1RhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Extract TapssieaSMcFNVGHiqxOuboDy('PRAQlPpHwYgwjBoaiePDnjSEGftQXgCBMWdGWKnOBKEjEEtxjDwxxyrLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('cVBdHktkgsQtIHZssTsMnolFAFMKBUFRgBmqCiqnTJSjQZFVKJNTTGUKS5SZW1vdGVzLkV4dHJhY3Q6RmlyZVNlcnZlcigxKQ0KICAJZW5kICAgIA0KfSkNCg0KVXBncmFkZXNUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')Extract RubiessieaSMcFNVGHiqxOuboDy('RqyxfMalQwDVdzwrEsBiRHrvpmEXPpCXVLRymZLCEnmzjyeHLAUSQgeLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgICBnYW1lOkdldFNlcnZpY2Uo')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('TgzNulxNueONJDNiMSRsFkaHTAFNDVpNlPBAIMnCsGaYMwqWwCIdkqGKS5SZW1vdGVzLkV4dHJhY3Q6RmlyZVNlcnZlcigyKQ0KICAJZW5kICAgIA0KfSkNCg0KVGVsZXBvcnRUYWI6QWRkQnV0dG9uKHsNCglOYW1lID0g')SpawnsieaSMcFNVGHiqxOuboDy('DRKWAYcbixcqkFhkWXTBbDqBSvZSFVedIPFyvZbjfwyNgWfUkTibdgHLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('rJkaWUsBMmwUdFeelfGZuIPXqBaBinfVwwOeEnbNAYtGkCpjtDdIHsaKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMSkNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')ForestsieaSMcFNVGHiqxOuboDy('YhwjxDnRQNOZijdeIjxfykqxXxytseOEWrKSbxdgoDjmoYHdHeMZaqNLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('KJnmfxWDqLFoUiiwACVuNlQacrYTPcBjGpQMWRZdrapViqKYaOZDmGOKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMikNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')DesertsieaSMcFNVGHiqxOuboDy('fxHHGikfJzqkEdcfZiuKdFnQcVrykGBMqxcFloGJBiQvdhGkWOJxiRCLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('laeMzpWAXrNDEcgmSPuBgOLEBTzBJgNSNHWDbDXkvOxQOGcuoFDwrGiKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMykNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')WintersieaSMcFNVGHiqxOuboDy('UnqGjIFdSZTzXmBwzYxeWRUpUcbotxDglcDxadIsoFMIounimGtBrhYLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('GXLiPzdpbhspJFetwsVprpNuKjHMmPOglaZIKJPmSOWbHEutmdNGdYxKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoNCkNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')LavasieaSMcFNVGHiqxOuboDy('ylrnZiSkdTFsdqYAERgBzJRKLnawrEHDHMXQYGwSOyUOjflSnjoEnhyLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('jUDSEalOtrTdDrTcgFCMsmnxJKBTRpbNLsyOXBzNnJmjVWtXUCOZwjHKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoNSkNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')AquasieaSMcFNVGHiqxOuboDy('pMVhTqTemVxgWgsopgyaLhfHbPpEwSrftrFlywzTvsOUPvinyiEXiMLLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('QLoJjOIuPsXIoppEitYxUekZNZCVwXVVJkAJetpUSvJCkZPOHffZgpEKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoNikNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')SakurasieaSMcFNVGHiqxOuboDy('eLmykQXVRpOhRgjiJagOLXDyENLJdrtbjKtPbZIocVSYihOgWmrfRkELA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('FALsdiQCMXbZsIkHAybBlnGwIzpHgQhHZiOEikHDDmmfGeSNnoaeMzRKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoNykNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')MinessieaSMcFNVGHiqxOuboDy('KboEktXgBHnYebhCUBtJsAmSukCdXpZFwlkyVjFQYGDVbEFqlCMJLnILA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('ZAzPQoZPeNlAHQoSOFWuwVoNewXXrDOHjHxmwZcadcAYlkBhLEBxzIfKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoOCkNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')GalaxysieaSMcFNVGHiqxOuboDy('kpYWUjXDZkGAZBNDMxMrKKbMOZzPaLkwBkoQZcdQWtXkCyBPxJkaWgDLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('lwzqqbxZmuInsqiyiLURFMfxAlgHeCGMyiIgZeomhSUsQteFwiSBdLIKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoOSkNCiAgCWVuZCAgICANCn0pDQoNClRlbGVwb3J0VGFiOkFkZEJ1dHRvbih7DQoJTmFtZSA9IA==')HeavensieaSMcFNVGHiqxOuboDy('OGCJardxslBWQIPxlWLmHOWiAhXAJZMgnPcirUNhOmHvbPqxuVDOVxSLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('sIWcXGTyjazSGyHNPCJtWaPybCzqfMebxYkkqrmhQaZqUOJVNQrmRrSKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTApDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')HellsieaSMcFNVGHiqxOuboDy('mydBnloczMxCAVLDzzZOTJvoCHSJqzQSeUqmBeuLRLrVuYzksMiOumMLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('jyprQHqDyqNUlXFJAMfvIuWGYsbmGidoJqDLeVTdJUQPCgZzaydsGqyKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTEpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')TechsieaSMcFNVGHiqxOuboDy('DFzNbXQgBINSfMUUVwgyArjYVHAghtjqXKnaiQfxfUUHkaNgymTPGupLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('klaerPDEeBLffBbmsOoTNuhCWskNtmfVFUINInXhdsMoVWjjSSZedWZKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTIpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')SteampunksieaSMcFNVGHiqxOuboDy('ApjAMXjjODBcbnRtefvHwLYVAYZMSFZjzdVKOgLcoadZmFeLELjSTQxLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('JwhOQJaBRFrVdwZQKRQoXCHiItjMiVnpEliAgJgOeaUOxtOPxgJQQZSKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTMpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')SwampsieaSMcFNVGHiqxOuboDy('eAVpAmuXGevuTzMcOPckKdaDXuAFrxBSzoRrurwbgQblpJwzhLLzPNqLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('FYuRtdgInggqGJHbgLtmvZsZfGPQDpeHXHlugppNZcZlmvoBgIpHSyEKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTQpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')CandysieaSMcFNVGHiqxOuboDy('rXYgthOIxzSlGPtLcqQpwnHkXmSItIpBMzCEUbKxuCBRtThkdOBvbJrLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('CBBphelIJniSHRbxmJSkTgyQcNygmUKCPAJrCmZpanFCSjMgIGydrSWKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTUpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')MagicsieaSMcFNVGHiqxOuboDy('fOdHLNDCVBJaDdzKrQneYQOwjjkAMpULSEpAaNvzYdkXROIrnIUdOCgLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('SPQuZSeQyKlReHFQVTnaVAQVKqWZsgrDWOcGiVzGgdyurUdWPNKtKDGKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTYpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')FantasysieaSMcFNVGHiqxOuboDy('ygFhBrGNLxpWcfZiZEMyyukLjAzmHeVbNiqgyYkSpmzjyehzgczrpGULA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('aIlVtSKPUDrTAxERsgYcQYHRuepPLtQwLKgPJkRZHIPuEVXjLmHUBaQKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTcpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')ToysieaSMcFNVGHiqxOuboDy('vdRZXesuLfhcXhBzWmYxDXxMsRYJpAAyAQbfjdikJcPYwtNUGPVBflxLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('CAuBjVNYsDwJcykQlufXNiNeDatjdqropIldjkywEBhIzMOlDVHTiscKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTgpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')RetrosieaSMcFNVGHiqxOuboDy('DPfyIrJqVOOsXlYrgFENNMIqgBUROkUTtubOTExuZSxjIsghQhsrLcgLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('vLAajOXvhcaLSNwDbNoCCfDawUveYVVaxVRVPJdGyuYXvRywBtPTpwyKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMTkpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')LabsieaSMcFNVGHiqxOuboDy('xJOFcZgSaruqAZLaTDUPrnfEDhVZrPsoKURPpmNNtScliIWKOcdiunYLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('zelrcsNAGiXoxqVkWNBptjhJhoFNLsGjWawNMAaQQVRCliVEwPzoNuFKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjApDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')TemplesieaSMcFNVGHiqxOuboDy('ICWQlEUtRjyFbvMdDdGiqGPgNczGLRhAPpuCyvKLKMGzTJSwBMHTzAmLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('gtfeBOjaWRUQSzvIzQKMtAjcwDkBOzWRBYoSNRfBayesJrbTpUnlPlTKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjEpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')FarmsieaSMcFNVGHiqxOuboDy('YRWdgVLfuygUfKMruxNgCBjtyMgBxGhVDDhGREgWhzaQAiWdFDvjkbeLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('OBjruVHAHRsVOLmHgRRTvUiVqvNrZOTRTtVMxLoPhATfvmJCikoecnnKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjIpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')CarnivalsieaSMcFNVGHiqxOuboDy('WfKRcyevrngrANCNYqnWWyAPDHyKbPDLLcnVRCBHEtZQgdlriySLAURLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('lLXONKywgbJMpQMJohDGpDVtRLGeCDglyzDIxpSEFhsDcCGHZEFcgyPKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjMpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')KitchensieaSMcFNVGHiqxOuboDy('zkVSXyAIWJpYgmlUrHzCpweTIzbEBMMuiNQVWWhkHOvCwnBcxbWSNCRLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('LwgDnkDoDCauJqbYYRMfvUWtoLJsUTRYQGTroHgdVRnlxaUzdFSPPPwKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjQpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Wild WestsieaSMcFNVGHiqxOuboDy('veWSDifLHBQpDUqtNoqgLogLjcFhLYGICIEtXTYMuqrXTljrdQaYzpmLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('QfWKhtklIqoiLrKLPLArKmQKNlDRnQZmyXSutKQmoFfFUntJYOJzujzKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjUpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')MedievalsieaSMcFNVGHiqxOuboDy('iGdtCjvCdLkYEiHrDOcHxVKgNbRtQPipXsnKMMOwMluHdqNMNPsRdfTLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('yeuEQqcOKLtJUqRyhHVldarZOfTqtsEUyApmHBLiQPsnQQDkrcJuCHRKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjYpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')SpysieaSMcFNVGHiqxOuboDy('ZTnEgyGxxaSmMwRByDXGXPdCwvHKYiMtCiVFjIJptQdcuFkFHEektTULA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('RsvjLVqXniBWktgdnstshgdBgXVvFgBWgQJDpzJkSIMxlXrXICaycNmKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjcpDQogIAllbmQgICAgDQp9KQ0KDQpUZWxlcG9ydFRhYjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')FrostsieaSMcFNVGHiqxOuboDy('iGTonLvKHOOkwkAzdoZMaLwRINNCheKahqnroBEZuMKPVxbdxbSRHFuLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KICAgICAgCWdhbWU6R2V0U2VydmljZSg=')ReplicatedStoragesieaSMcFNVGHiqxOuboDy('UqHxczgyJDCkfenPUbRkBbqzHNSSmkIEmvgjvrnRJJVsRWcwgYATWKvKS5SZW1vdGVzLlRlbGVwb3J0VG9BcmVhOkZpcmVTZXJ2ZXIoMjgpDQogIAllbmQgICAgDQp9KQ0KDQotLSBEcm9wRG93bnMNCkVnZ3NUYWI6QWRkRHJvcGRvd24oew0KCU5hbWUgPSA=')Select EggsieaSMcFNVGHiqxOuboDy('mcnZXuENQLGmDNINxbRHJMpHPtYiAeEszCSUxMdpShpyqGZGWXqJDUiLA0KCURlZmF1bHQgPSA=')Basic EggsieaSMcFNVGHiqxOuboDy('umANevbQSHyswOqWsGuyTtzaxEkLoJegubnkRlhyRmPrufnaqwmplatLA0KCU9wdGlvbnMgPSB7')Basic EggsieaSMcFNVGHiqxOuboDy('auksSjLfHhxQiEYsqRUdqJnbmckSHvUeoUrfaDqIRmdiZiwZYKCTBWcLCA=')Rare EggsieaSMcFNVGHiqxOuboDy('RvFlfmBtJWnIWlMPXSbMztjymXcjpUNzpWtaoZfsRVnQAOgXuYmAUzKLCA=')Forest EggsieaSMcFNVGHiqxOuboDy('vEXMQLyrYxgjtTWxolCOMiKQVSmZaUlTPNsqadqwxGieroMhQDodMrKLCA=')Desert EggsieaSMcFNVGHiqxOuboDy('OEQixWoIsGYSmqZRfzTdKXOPvifbmQYSOZIjojnfwIyfRHuGkCCftOHLCA=')Winter EggsieaSMcFNVGHiqxOuboDy('zqbtdAYHJzcNzwxYqSTptwraWzNGDXZnZIHSEXPiJZkarMkssfzReUhLCA=')Lava EggsieaSMcFNVGHiqxOuboDy('FCzIEDqwMEPNNELZkEtuaFuEUWmuTAgxiLrtqadAIwnThXGXKyveGmiLCA=')Aqua EggsieaSMcFNVGHiqxOuboDy('subCkvAXCLlRPJCjSyYZGPsdUZtMKKFxIezgzOwGhBAynFFgRkGTAMJLCAg')Sakura EggsieaSMcFNVGHiqxOuboDy('XaZAoOhAEYJwHFiPTJFUmkDBoKluiRNyGAMcgIDIlHtVDIKchinqdziLCA=')Mine EggsieaSMcFNVGHiqxOuboDy('QrZoPiMupvNRMmCkMckuZKWlYbvMhKjMxSDwpKleLAFZPcNtrHPxGmKLCA=')Galaxy EggsieaSMcFNVGHiqxOuboDy('ueWDSZxBplNZgpXcpmWQimqTUTHcBoncdSwdhCtvRwFoKCyFJMYxLyvLCA=')Heaven EggsieaSMcFNVGHiqxOuboDy('eEnvQJMmtEaowKSdNyzFayByjVpFayFSGrdewOSStsGoWGnQRzDjiJRLCA=')Hell EggsieaSMcFNVGHiqxOuboDy('VXvUyrmNFGbdWtXrFhPsgZrjrNHPaAdmoIdKNdcslcVLvELVpTtlfMeLCA=')Tech EggsieaSMcFNVGHiqxOuboDy('tzLalQFhHEoOGBjstwsYMKKcpAcOTwpeCDZJZKbzMMCRoiLFKGUeuejLCA=')Steampunk EggsieaSMcFNVGHiqxOuboDy('OLLesVprUZytHJhxJIfsLYgXEGGmlunHMEkLJjefprAYXxEmrFqcMDnLCA=')Swamp EggsieaSMcFNVGHiqxOuboDy('vdQRYfecrAHwQKgjfCtZpaGtELQevitIOZRUGqabcHtPZCETjfvMrOGLCA=')Candy EggsieaSMcFNVGHiqxOuboDy('XJmuzQoMtpJICUuIOaEqZLhddomZADfLkLRWmQImGduRalMxSVKZbqHLCA=')Magic EggsieaSMcFNVGHiqxOuboDy('pyaglzOCBHpOAKhVHAbUGeoFDLrqWJZwRoHOxNPSeFohKzopnTCbtXZLCA=')Fantasy EggsieaSMcFNVGHiqxOuboDy('KolsRxaKORaGQXhaYJnqMPSwPyAckCJFIKkHrlbLQsXtBDHcimqMxPcLCA=')Toy EggsieaSMcFNVGHiqxOuboDy('BTPiwoWyLgIqjrKIjzSADGFrknyBsluVnFdhtfYHJmtdjFxQPPVXWsrLCA=')Retro EggsieaSMcFNVGHiqxOuboDy('CCKwwEXfRWYgFmlJlMmLCuHxLMXJqkhyIsLPQcffoKzYWHosCmVgguJLCA=')Lab EggsieaSMcFNVGHiqxOuboDy('PFPEBUThziWFCUwpnMaXfTvhqJcjJLGZplrqbdCtoKEDTeWtzPDnjeMLCA=')Temple EggsieaSMcFNVGHiqxOuboDy('URdKULFSTRfmhNMBNKAFuvFASpxujoCBToFbzeqIFBUTKdoKEDImrVrLCA=')Farm EggsieaSMcFNVGHiqxOuboDy('cgXvpQaHuJivOsBWctNmeHjLzgACZeyveRptqWGujyglpzuKkFPYwiuLCA=')Carnival EggsieaSMcFNVGHiqxOuboDy('QyLUXJpJiExtBHICNruTblDBaCMByEQPfCfLanYbKsoDXkjFiAAUVdILCA=')Kitchen EggsieaSMcFNVGHiqxOuboDy('CJFsfQNFBwKzzDYTwXcrChaDyUUahTfeebpwsAeTbiWWOzkqRpLOdPiLCA=')Wild West EggsieaSMcFNVGHiqxOuboDy('TctFHrquzhETfwEpLcBVaEJjHWARImdAjvQbvFruVNlgJPhgxWFCRgZLCA=')Medieval EggsieaSMcFNVGHiqxOuboDy('MTMOVdWFpGLDUUbcQqAGnsFlHleADjVfoCYOmStwvciWaMQhGhcsReLLCA=')Frost EggsieaSMcFNVGHiqxOuboDy('dhsnKutNeXPbymAKxnlYozIZsRRxOQQgjSRYaUNDzmbQmEZfkZLQkFcfSwNCglDYWxsYmFjayA9IGZ1bmN0aW9uKFZhbHVlKQ0KICAgICAgICBfRy5zZWxlY3RFZ2cgPSBWYWx1ZQ0KICAgICAgICBwcmludChfRy5zZWxlY3RFZ2cpDQoJZW5kICAgIA0KfSkNCg0KLS0gTGFiZWxzDQpFZ2dzVGFiOkFkZExhYmVsKA==')Stand near the selected egg for it to work!')
+MainTab:AddLabel("Welcome to Kordx's Tapping Legends X Hub!")
+MainTab:AddLabel("Check out the tab Misc for our discord server.")
+MainTab:AddLabel("Script Made by hecate$#6910 / Kordx")
+
+MiscTab:AddLabel("Join the Discord! https://discord.gg/6Bg4aw4cH8")
+
+MiscTab:AddToggle({
+	Name = "Auto Equip Best",
+	Default = false,
+	Callback = function(Value)
+        _G.equipBest = Value
+        equipBest()
+	end    
+})
+
+-- Buttons
+
+UpgradesTab:AddButton({
+	Name = "Rebirth Upgrade (58 Max)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Upgrade:InvokeServer("Ruby","RebirthsUpgrade")
+  	end    
+})
+
+UpgradesTab:AddButton({
+	Name = "Tap Multiplier Upgrade  (250 Max)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Upgrade:InvokeServer("Ruby","TapMultiplier")
+  	end    
+})
+
+UpgradesTab:AddButton({
+	Name = "+1 Pet Storage (200 Max)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Upgrade:InvokeServer("Ruby","PetStorage")
+  	end    
+})
+
+UpgradesTab:AddButton({
+	Name = "Faster WalkSpeed (32 Max)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Upgrade:InvokeServer("Ruby","WalkSpeed")
+  	end    
+})
+
+UpgradesTab:AddButton({
+	Name = "Critical Chances (200 Max)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Upgrade:InvokeServer("Ruby","CriticalChances")
+  	end    
+})
+
+MiscTab:AddButton({
+	Name = "Claim PlayTime Achievements",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(1)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(2)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(3)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(4)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(5)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(6)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(7)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(8)
+		wait(0.01)
+		game:GetService("ReplicatedStorage").Remotes.PlaytimeReward:FireServer(9)
+  	end    
+})
+
+MiscTab:AddButton({
+	Name = "FreeAutoClicker",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Settings:FireServer("FreeAutoEnabled")
+  	end    
+})
+
+MiscTab:AddButton({
+	Name = "Show / Hide All",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Settings:FireServer("Settings_HideAllPets")
+  	end    
+})
+
+UpgradesTab:AddLabel("Other Upgrades")
+
+UpgradesTab:AddButton({
+	Name = "Extract Taps",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Extract:FireServer(1)
+  	end    
+})
+
+UpgradesTab:AddButton({
+	Name = "Extract Rubies",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Extract:FireServer(2)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Spawn",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(1)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Forest",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(2)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Desert",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(3)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Winter",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(4)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Lava",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(5)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Aqua",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(6)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Sakura",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(7)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Mines",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(8)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Galaxy",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(9)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Heaven",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(10)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Hell",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(11)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Tech",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(12)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Steampunk",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(13)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Swamp",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(14)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Candy",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(15)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Magic",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(16)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Fantasy",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(17)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Toy",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(18)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Retro",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(19)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Lab",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(20)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Temple",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(21)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Farm",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(22)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Carnival",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(23)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Kitchen",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(24)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Wild West",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(25)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Medieval",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(26)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Spy",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(27)
+  	end    
+})
+
+TeleportTab:AddButton({
+	Name = "Frost",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").Remotes.TeleportToArea:FireServer(28)
+  	end    
+})
+
+-- DropDowns
+EggsTab:AddDropdown({
+	Name = "Select Egg",
+	Default = "Basic Egg",
+	Options = {"Basic Egg", "Rare Egg", "Forest Egg", "Desert Egg", "Winter Egg", "Lava Egg", "Aqua Egg",  "Sakura Egg", "Mine Egg", "Galaxy Egg", "Heaven Egg", "Hell Egg", "Tech Egg", "Steampunk Egg", "Swamp Egg", "Candy Egg", "Magic Egg", "Fantasy Egg", "Toy Egg", "Retro Egg", "Lab Egg", "Temple Egg", "Farm Egg", "Carnival Egg", "Kitchen Egg", "Wild West Egg", "Medieval Egg", "Frost Egg"},
+	Callback = function(Value)
+        _G.selectEgg = Value
+        print(_G.selectEgg)
+	end    
+})
+
+-- Labels
+EggsTab:AddLabel("Stand near the selected egg for it to work!")
 
 end
-OrionLib:Init()    
+OrionLib:Init()
