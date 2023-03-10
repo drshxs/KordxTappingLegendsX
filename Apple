@@ -1,1 +1,31 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/P0jefui3", true))()
+local input
+local key = loadstring(game:HttpGet('https://pastebin.com/raw/gAmGK2vt'))() ------------
+
+
+function begin()
+    rconsoleprint('@@WHITE@@')
+    rconsolename("Kordx | Key System")
+    rconsoleprint("Get Your Key Here: https://discord.gg/TyHFYAthP3 \n")
+    rconsoleprint("Enter Key: ")
+    input = rconsoleinput()
+
+
+    if input == key then
+        rconsoleclear()
+        rconsoleprint('@@LIGHT_GREEN@@')
+        rconsolename("Kordx | Script")
+        rconsoleprint("Welcome to Kordx!")
+        loadstring(game:HttpGet("https://pastebin.com/raw/a84Ajk2K", true))()
+
+    elseif input ~= key then
+        rconsoleprint("@@RED@@")
+        rconsoleprint("Incorrect Key Entered!\n")
+        rconsolename("Incorrect Key")
+        wait(2)
+        rconsoleclear()
+        begin()
+    end
+end
+
+
+begin()
